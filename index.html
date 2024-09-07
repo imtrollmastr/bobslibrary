@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bob's Library | All your weekly school news, packed in a nutshell.</title>
+    <title>Bob's Library | Your Weekly School News in a Nutshell</title>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
         /* Global styles */
-        * , *::before, *::after {
+        *, *::before, *::after {
             font-family: 'Noto Sans Mono', monospace;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        strong {
-            font-weight: 600;
+        body {
+            background-color: black;
+            color: white;
+            margin: 10px;
         }
 
         h1 {
@@ -28,12 +30,6 @@
             font-weight: 600;
         }
 
-        body {
-            background-color: black;
-            color: white;
-            margin: 10px;
-            font-family: 'Noto Sans Mono', monospace;
-        }
         footer {
             background-color: black;
             padding: 20px 0;
@@ -54,14 +50,23 @@
         }
 
         .social-icon:hover {
-            color: #0077b5; /* Change the color on hover, e.g., LinkedIn blue */
+            color: #0077b5; /* Change the color on hover */
         }
 
-        .link-container {
+        .link-container, .iframe-container {
             display: flex;
-            justify-content: center; /* Centers horizontally */
-            align-items: center;     /* Centers vertically */
-            height: 100vh;           /* Optional: Set height as needed */
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .link-container p {
+            text-align: center;
+        }
+
+        .footer-note {
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -72,85 +77,90 @@
     <h3>Bob's Library</h3>
     <br>
     <main>
-        <br>
+        <!-- Issue #01 -->
         <div class="link-container">
             <a href="./cdn/liquacious_issue01.pdf">
                 <img src="./cdn/issue01_cover.png" alt="Issue 01 Cover" style="width:150px; height:210px;">
             </a>
         </div>
-        <p style="text-align: center;">Liquacious: Issue #01</p>
+        <p>Liquacious: Issue #01</p>
         <div class="link-container">
             <a href="./cdn/liquacious_issue01.pdf" style="color: white; font-size: small;" download>Download now</a>
             <a href="./cdn/liquacious_issue01.pdf" style="color: white; font-size: small;">Read as PDF</a>
         </div>
-        <br>
-        <br>
+
+        <!-- Issue #02 -->
         <div class="link-container">
             <a href="./cdn/liquacious_issue02.pdf">
                 <img src="./cdn/issue02_cover.png" alt="Issue 02 Cover" style="width:150px; height:210px;">
             </a>
         </div>
-        <p style="text-align: center;">Liquacious: Issue #02 (Coming soon)</p>
+        <p>Liquacious: Issue #02 (Coming soon)</p>
         <div class="link-container">
             <a href="./cdn/liquacious_issue02.pdf" style="color: white; font-size: small;" download>Download now</a>
             <a href="./cdn/liquacious_issue02.pdf" style="color: white; font-size: small;">Read as PDF</a>
         </div>
-        <br>
-        <br>
+
+        <!-- Level 101 -->
         <div class="link-container">
             <a href="./cdn/level101_comic.pdf">
-                <img src="./cdn/level101_cover.png" alt="Issue 02 Cover" style="width:150px; height:210px;">
+                <img src="./cdn/level101_cover.png" alt="Level 101 Cover" style="width:150px; height:210px;">
             </a>
         </div>
-        <p style="text-align: center;">Liquacious: Level 101 by Chloe Chen</p>
+        <p>Liquacious: Level 101 by Chloe Chen</p>
         <div class="link-container">
             <a href="./cdn/level101_comic.pdf" style="color: white; font-size: small;" download>Download now</a>
             <a href="./cdn/level101_comic.pdf" style="color: white; font-size: small;">Read as PDF</a>
         </div>
-        <br>
-        <br>
+
+        <!-- School Battles -->
         <div class="link-container">
             <a href="./cdn/schoolbattles_comic.pdf">
-                <img src="./cdn/schoolbattles_cover.png" alt="Issue 02 Cover" style="width:150px; height:210px;">
+                <img src="./cdn/schoolbattles_cover.png" alt="School Battles Cover" style="width:150px; height:210px;">
             </a>
         </div>
-        <p style="text-align: center;">Liquacious: School Battles by Chloe Chen</p>
+        <p>Liquacious: School Battles by Chloe Chen</p>
         <div class="link-container">
             <a href="./cdn/schoolbattles_comic.pdf" style="color: white; font-size: small;" download>Download now</a>
             <a href="./cdn/schoolbattles_comic.pdf" style="color: white; font-size: small;">Read as PDF</a>
         </div>
-        <br>
-        <br>
+
+        <!-- Embedded YouTube Video -->
         <div class="iframe-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/fLqJo3hbv5s?si=dHzRHvHGjhaWEY8u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+
+        <!-- Footer -->
         <footer>
             <div class="social-icons">
-                <p>This website is licensed by <a href="./LICENSE" style="color: white;">the MIT License</a></p>
                 <a href="https://youtube.com/@liquacious" target="_blank" class="social-icon">
-                    <img src="./static/youtube.png" height="25" width="25">
+                    <img src="./static/youtube.png" height="25" width="25" alt="YouTube">
                 </a>
                 <a href="https://instagram.com/liquacious" target="_blank" class="social-icon">
-                    <img src="./static/instagram.png" height="25" width="25">
+                    <img src="./static/instagram.png" height="25" width="25" alt="Instagram">
                 </a>
             </div>
+            <p class="footer-note">This website is licensed under <a href="./LICENSE" style="color: white;">the MIT License</a>.</p>
         </footer>
-        <script>
-            const timeElement = document.getElementById("time");
-            function updateTime() {
-                const now = new Date();
-                const month = (now.getMonth() + 1).toString().padStart(2, "0");
-                const day = now.getDate().toString().padStart(2, "0");
-                const year = now.getFullYear();
-                const hours = now.getHours().toString().padStart(2, "0");
-                const minutes = now.getMinutes().toString().padStart(2, "0");
-                const seconds = now.getSeconds().toString().padStart(2, "0");
-                const milliseconds = now.getMilliseconds().toString().padStart(3, "0").slice(0, 2); // First two digits of milliseconds
-                const formattedTime = `${month} ${day} ${year} ${hours}:${minutes}:${seconds}:${milliseconds}`;
-                timeElement.textContent = formattedTime;
-            }
-            setInterval(updateTime, 10); // Update every 10 milliseconds
-            updateTime();
-        </script>
     </main>
+
+    <script>
+        const timeElement = document.getElementById("time");
+        function updateTime() {
+            const now = new Date();
+            const formattedTime = now.toLocaleString('en-US', {
+                month: '2-digit',
+                day: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            timeElement.textContent = formattedTime;
+        }
+        setInterval(updateTime, 1000); // Update every second
+        updateTime();
+    </script>
 </body>
+</html>
