@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <title>Bob's Library | All your weekly school news, packed in a nutshell.</title>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -31,6 +34,29 @@
             margin: 10px;
             font-family: 'Noto Sans Mono', monospace;
         }
+        footer {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: #0077b5; /* Change the color on hover, e.g., LinkedIn blue */
+        }
+
     </style>
 </head>
 <body>
@@ -52,7 +78,7 @@
         <a href="./cdn/liquacious_issue02.pdf">
             <img src="./cdn/issue02_cover.png" alt="Issue 02 Cover" style="width:150px; height:210px;">
         </a>
-        <p>Liquacious: Issue #02</p>
+        <p>Liquacious: Issue #02 (Coming soon)</p>
         <a href="./cdn/liquacious_issue02.pdf" style="color: white; font-size: small;" download>Download now</a>
         <a href="./cdn/liquacious_issue02.pdf" style="color: white; font-size: small;">Read as PDF</a>
         <br>
@@ -74,6 +100,16 @@
         <br>
         <br>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/fLqJo3hbv5s?si=dHzRHvHGjhaWEY8u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <footer>
+            <div class="social-icons">
+                <a href="https://youtube.com/@liquacious" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com/liquacious" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </footer>
         <script>
             const timeElement = document.getElementById("time");
             function updateTime() {
