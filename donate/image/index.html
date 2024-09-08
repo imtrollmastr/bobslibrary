@@ -70,7 +70,7 @@
   
         if (getCookie("verified-name") == "") {
           let name_prompt = prompt("Enter the name you would like to print on the badge:")
-          document.cookie = "verified-name: " + name_prompt
+          document.cookie = "verified-name = " + name_prompt
         } else {
           document.getElementById("verified_name").innerHTML = getCookie("verified-name")
         }
