@@ -1,58 +1,79 @@
 <html>
-    <head>
-        <style>
-            /* Container holding the image and the text */
-            .container {
-                position: relative;
-                text-align: center;
-                color: white;
-            }
+  <head>
+    <style>
+      /* Container holding the image and the text */
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
 
-                /* Bottom left text */
-            .bottom-left {
-                position: absolute;
-                bottom: 8px;
-                left: 16px;
-            }
+      /* Bottom left text */
+      .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+      }
 
-            /* Top left text */
-            .top-left {
-                position: absolute;
-                top: 8px;
-                left: 16px;
-            }
+      /* Top left text */
+      .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+      }
 
-            /* Top right text */
-            .top-right {
-                position: absolute;
-                top: 8px;
-                right: 16px;
-            }
+      /* Top right text */
+      .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+      }
 
-            /* Bottom right text */
-            .bottom-right {
-                position: absolute;
-                bottom: 8px;
-                right: 16px;
-            }
+      /* Bottom right text */
+      .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+      }
 
-            /* Centered text */
-            .centered {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <img src="donation_badge.svg" alt="DonationBadge" style="width:100%;">
-            <div class="bottom-left">Bottom Left</div>
-            <div class="top-left">Top Left</div>
-            <div class="top-right">Top Right</div>
-            <div class="bottom-right">Bottom Right</div>
-            <div class="centered">Centered</div>
-        </div>
-    </body>
+      /* Centered text */
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <script>
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      if (getCookie("verified-name") == "") {
+        let name_prompt = prompt("Enter the name you would like to print on the badge:")
+        document.cookie = "verified-name: " + name_prompt
+      } else {
+        document.getElementById("verified_name").innerHTML = getCookie("verified-name")
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="donation_badge.svg" alt="DonationBadge" style="width:100%;">
+      <div class="top-left">Verified by Liquacious</div>
+      <div class="centered" style="font-size: 100px; color: black;" id="verified_name"></div>
+    </div>
+  </body>
 </html>
